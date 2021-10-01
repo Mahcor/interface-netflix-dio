@@ -1,0 +1,396 @@
+
+/*VARIÁVEIS NO CSS - USAR QUANDO HOUVER UM PADRÃO DAS CORES*/
+:root {
+    --vermelho: #E50914;
+/*    --preto: #141414;*/
+    --preto: #000;
+}
+
+
+/*Resetando o HTML*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS BASE*/
+body{
+    background-color: var(--preto);
+    font-family: 'Netflix Sans', Arial, sans-serif;
+    color: white;
+}
+
+
+header .container { /*Container tipo flex para alinhar o topo*/
+    display: flex;
+    flex-direction: row;/*Por padrão, o Flex já ajusta por ROW - Aqui joga o Menu para baixo do título quando diminui a tela */
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: Arial Black;
+    font-size: 40px;
+    
+}
+
+header nav a { /*Limpa a decoração do link, remove o underline*/
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover { /*Destaca o texto ao posicionar o mouse*/
+    color: #fff;
+}
+
+
+/* DADOS DO FILME PRINCIPAL */
+
+.filme-principal{
+    font-size: 16px;
+    height: 600px;
+    
+    background-size: cover;
+    background: linear-gradient(rgba(0,0,0, .50),rgba(0,0,0, .50)100%), url(../img/ladybug2.jpg); /*Gradiente*/
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin: top 10px;
+    margin-bottom: 50px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,50%);
+    border: none;   
+    color: white;
+
+    padding: 15px 30px;
+    font-size: 12px;;
+    margin-right: 15px;
+
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+
+.botao:hover {
+    background-color:white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+
+.container {
+    margin-left: 20px;
+}
+
+
+.filme-principal .container { /* Limita o tamanhao do Flax para o container*/
+    width: 80%;
+}
+
+/* TRATANDO AS IMAGENS */
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+/* AQUI TERMINA O MAIN DA AULA 
+*
+*
+* Minha estilização */
+
+.main-faq {
+    padding-top: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+h1, h4, .mail {
+    text-align: center;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.bt-enviar {
+    background-color: var(--vermelho);
+    color: white;
+    border: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1.625rem;
+    min-width: 100px; /* min-width: 450px; */
+    letter-spacing: .1px;
+    border-radius: 2px;
+    height: 60px;
+    width:200px;
+    padding:.5rem 0;
+}
+
+.box-mail {
+    margin-top: 20px;
+    min-width: 100px; /* min-width: 450px; */
+    height: 60px !important;
+    border: 0;
+    padding: .8em 2.2em .8em 1.2em;
+    margin-bottom: 15px;
+    width: 500px;
+}
+
+.main-faq{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    
+}
+
+.bt-faq-item{
+    padding: .8em 2.2em .8em 1.2em;
+    margin-bottom: 1px;
+    font-weight: 400;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 800px;
+    height: 70px;
+    border: 0;
+    display: flex;
+    text-align: left;
+    color: white;
+    background: #303030;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+
+ul{
+    margin: 1.25em auto;
+    max-width: 815px;
+}
+
+li {
+    padding-top: 10px;
+    border:#141414;
+    justify-content: center;
+    justify-items: auto;
+}
+
+.texto-item {
+    font-size: 28px;
+    /*padding: .8em 2.2em .8em 1.2em;*/
+    margin-top: 10px;
+    margin-bottom: 1px;
+    font-weight: 400;
+    position: relative;
+    width: 80%;
+    border: 0;
+    display: block;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 100px;
+}
+
+.mail, .box-mail, i {
+    padding-left: 10px;
+}
+
+.texto-item i {
+    position: absolute;
+    right: -5em;
+    height: 1em;
+    width: 1em;
+}
+.faq-resposta {
+    display: inline-block;
+    padding: 1.2em;
+    font-size: 28px;
+    /*padding: .8em 2.2em .8em 1.2em;*/
+    margin-top: 10px;
+    margin-bottom: 1px;
+    font-weight: 400;
+}
+.faq-resposta span {
+    display: inline-block;
+    padding: 1.2em;
+    text-align: left;
+}
+
+.item-conteudo span {
+    display: none;
+    height: 0;
+}
+
+.item-conteudo span button:checked {
+    max-height: 100vh;
+}
+
+.footer-top {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 30px;
+    color: #757575;
+}
+
+.footer-divisor {
+    display: flex;
+    padding: 70px 45px 0px;
+    border-top: 10px solid #333;
+}
+
+.footer-link {
+    color: #757575;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.footer-link-item{
+    font-size: 20px;
+    display: flex;
+    justify-content: ROW;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #757575;
+    background-color: transparent;
+}
+
+div.site-footer {
+    margin: 0px 42.5625px 0px 42.5469px;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 0;
+    text-decoration: none;
+}
+
+ul {
+    display: block;
+}
+
+
+/* MENU DROP DOWN */
+.ui-select-wrapper .select-arrow {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+    background-color: #141414;
+    border: 2px #333 solid;
+    width: 70%;
+    height: 50px;
+    background-image: url('<i class="far fa-globe"></i>');
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: gray;
+    justify-content: column;
+    display: block;
+}
+
+.prefix  {
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.img-globe {
+    margin-right: 5px;
+    padding-left: 10px;
+}
+
+.container-text-img {
+    /*border: 1px solid #fff;*/
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.row-text-img {
+    display: flex;
+    justify-content: row;
+    padding-left: 300px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.imagem-kid {
+    text-align: right;
+    position: relative;
+    display: block;
+}
+
+.texto-kid {
+    display: flex;
+    justify-content: row;    
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+}
+
+.texto-kid > div > div > h1 {
+    justify-content: left;
+}
+
+.texto-kid p {
+    font-size: 30px;
+    display: flex;
+    justify-content: column;
+}
+
+hr {
+    border: none;
+    color:#303030;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 8px solid #222;
+    padding: 50px 5%;
+    margin-bottom: 0;
+    background: 0 0;
+    color: #fff;
+}
+
+.main-faq, p h1 {
+    font-size: 16px;
+}
+
+.txt-titulo-descricao, p {
+    font-size: 1.625rem;
+    font-weight: 400;
+}
